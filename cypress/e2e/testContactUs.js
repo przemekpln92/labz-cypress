@@ -6,7 +6,7 @@ describe('Contact Us Tests', () => {
         cy.visit('/Contact-Us/contactus.html')
     })
 
-    it('Send Form', () => {
+    it('Send Form With Correct Data', () => {
         contactUsPage.fillAndSendForm("Adam", "Kowalski", "abc@abc.pl", "any")
         cy.get('h1').should('contain', 'Thank You for your Message!')
     })
