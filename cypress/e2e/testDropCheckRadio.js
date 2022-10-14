@@ -15,7 +15,7 @@ describe('Contact Us Tests', () => {
         dropCheckRadioPage.verifyCheckBoxes()
     })
 
-    it.only('Radio Buttons', () => {
+    it('Radio Buttons', () => {
         dropCheckRadioPage.verifyRadioButtons()
     })
 })
