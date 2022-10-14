@@ -49,8 +49,16 @@ export class DropCheckRadioPage {
                 .check({force: true})
 
             cy.wrap(radio)
-                .first()
-                .should('not.be.checked')
+                .eq(2)
+                .check({force: true})
+            
+            cy.wrap(radio)
+                .eq(3)
+                .check({force: true})
+
+            cy.wrap(radio)
+                .eq(4)
+                .check({force: true})
         })
 
 
