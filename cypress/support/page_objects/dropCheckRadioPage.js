@@ -35,6 +35,26 @@ export class DropCheckRadioPage {
 
 
     }
+
+    verifyRadioButtons(){
+
+        cy.get('#radio-buttons').find('[type="radio"]').then( radio => {
+            cy.wrap(radio)
+                .first()
+                .check({force: true})
+                .should('be.checked')
+
+            cy.wrap(radio)
+                .eq(1)
+                .check({force: true})
+
+            cy.wrap(radio)
+                .first()
+                .should('not.be.checked')
+        })
+
+
+    }
     
 }
 
